@@ -1,14 +1,32 @@
 package by.sam.tree.entity;
 
+import java.util.Arrays;
+
 public class Branch {
     private Leaf[] leafs;
-    private boolean isFallen = Boolean.FALSE;
     private static int counter = 0;
     private int number;
+
+    public Leaf[] getLeafs() {
+        return leafs;
+    }
+
+    public static int getCounter() {
+        return counter;
+    }
+
+    public int getNumber() {
+        return number;
+    }
 
     public Branch() {
         ++counter;
         number = counter;
+        int amountLeafs = 5 + (int) (Math.random() * 20);
+        Leaf[] leafs = new Leaf[amountLeafs];
+        for (int i = 0; i < amountLeafs; i++) {
+            leafs[i] = new Leaf();
+        }
     }
 
     public void frostLeafs() {
@@ -30,5 +48,20 @@ public class Branch {
         for (int i = 0; i < leafs.length; i++) {
             leafs[i].comeYellow();
         }
+    }
+
+    public void greenLeafs() {
+        System.out.println("ветка номер " + number + " пожелтела");
+        for (int i = 0; i < leafs.length; i++) {
+            leafs[i].comeGreen();
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "\nBranch{" +
+                "leafs=" + Arrays.toString(leafs) +
+                ", number=" + number +
+                '}';
     }
 }

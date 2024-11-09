@@ -35,4 +35,19 @@ public class Leaf {
         leafColor = LeafColor.YELLOW;
         System.out.println("лист номер " + number + " пожелтел");
     }
+
+    public void comeGreen() {
+        leafColor = LeafColor.GREEN;
+        System.out.println("лист номер " + number + " зацвёл");
+    }
+
+
+    @Override
+    public String toString() {
+        return "Leaf{" +
+                "leafColor=" + leafColor +
+                ", isFallen=" + isFallen +
+                ", number=" + number +
+                '}';
+    }
 }
