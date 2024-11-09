@@ -5,8 +5,10 @@ package by.sam.tree;
 import by.sam.tree.entity.Tree;
 
 public class Main {
-    TreeService treeService = new TreeService();
-    Tree tree1 = new Tree();
+    public static void main(String[] args) {
+        TreeService treeService = new TreeService();
+        Tree tree1 = new Tree();
 
-    treeService.printTree(tree1);
+        treeService.printTree(tree1);
+    }
 }

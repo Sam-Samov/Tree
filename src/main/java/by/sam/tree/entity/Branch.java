@@ -27,6 +27,7 @@ public class Branch {
         for (int i = 0; i < amountLeafs; i++) {
             leafs[i] = new Leaf();
         }
+        this.leafs = leafs;
     }
 
     public void frostLeafs() {
@@ -60,8 +61,8 @@ public class Branch {
     @Override
     public String toString() {
         return "\nBranch{" +
-                "leafs=" + Arrays.toString(leafs) +
                 ", number=" + number +
+                " leafs=" + Arrays.toString(leafs) +
                 '}';
     }
 }

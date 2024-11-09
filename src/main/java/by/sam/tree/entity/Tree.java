@@ -11,6 +11,7 @@ public class Tree {
         for (int i = 0; i < amountBranches; i++) {
             branches[i] = new Branch();
         }
+        this.branches = branches;
     }
 
     public Branch[] getBranches() {
